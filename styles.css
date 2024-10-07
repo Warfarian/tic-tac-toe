@@ -1,0 +1,94 @@
+@font-face {
+  font-family: 'futura_std';
+  src: url('fonts/futura_std_heavy-webfont.woff2') format('woff2'),
+       url('fonts/futura_std_heavy-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+:root{
+  --purple: #CDB4DB;
+  --lightpink: #FFC8DD;
+  --pink: #FFAFCC;
+  --lightblue: #BDE0FE;
+  --blue: #A2D2FF;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    margin-top: 20px;
+    justify-content: center;
+    padding: 20px;
+    gap: 3px;
+  }
+  .cell {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: var(--blue);
+    border-radius: 8px;
+  }
+
+  .cell:hover{
+    background-color: var(--lightblue);
+    transition: ease-in-out .5s;
+  }
+
+  #message {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+body{
+  font-family: 'futura_std';
+  background-color: var(--purple);
+  text-align: center;
+}
+
+h1{
+  display: flex;
+  justify-content: center;
+  font-size: 100px;
+}
+
+button[type="submit"]{
+  padding: 8px;
+  border-radius: 10px;
+}
+
+input[type="text"]{
+  padding: 8px;
+  border-radius: 10px;
+  background-color: var(--pink);
+  color: cadetblue;
+  font-weight: 700;
+  font-family: 'futura_std';
+}
+
+input::placeholder{
+  font-family: 'futura_std';
+  color: darkblue;
+  font-size: small;
+  font-weight: 600;
+}
+
+button{
+  font-family: 'futura_std';
+  padding: 8px;
+  border-radius: 10px;
+  background-color: var(--pink);
+}
+
+input:hover{
+  background-color: var(--lightpink);
+  transition: ease-in-out .3s;
+}
+
+button:hover{
+  background-color: var(--lightpink);
+  transition: ease-in-out .3s;
+}
